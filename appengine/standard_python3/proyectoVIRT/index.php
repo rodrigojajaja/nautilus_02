@@ -27,7 +27,7 @@
       $clave = "";
       $bd = "Nautilus";
 
-      $coneccion = mysqli_connect ($servidor, $usuario, $clave, $bd );
+      $coneccion = new mysqli($servidor, $usuario, $clave, $bd );
       if ($coneccion->connect_error) {
         die("Connection failed: " . $coneccion->connect_error);
       }
