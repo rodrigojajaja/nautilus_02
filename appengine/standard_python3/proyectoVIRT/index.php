@@ -34,7 +34,7 @@
       echo "Connected successfully";
       
       $insertar = "INSERT INTO registro_distribuidores (nombre, correo, telefono) Values ('$nombre','$correo','$telefono')";
-      echo $insertar;
+      
       if ($coneccion->query($insertar) === TRUE) {
         echo "New record created successfully";
       } else {
