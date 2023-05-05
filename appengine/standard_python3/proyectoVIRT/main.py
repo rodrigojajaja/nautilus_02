@@ -39,7 +39,7 @@ def redes():
     return render_template("redes_i.html", title = 'Contacto')
 
 @app.route('/servicios_i.html')
-def negocios():
+def servicios():
     """Return a friendly HTTP greeting."""
     return render_template("servicios_i.html", title = 'Servicios')
 
