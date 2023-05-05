@@ -23,8 +23,8 @@
       $telefono = $_POST['telefono'];
       echo "conectando a la DB";
       $servidor = "localhost";
-      $usuario = "root";
-      $clave = "";
+      $usuario = "operador";
+      $clave = "12345";
       $bd = "Nautilus";
 
       $coneccion = new mysqli($servidor, $usuario, $clave, $bd );
