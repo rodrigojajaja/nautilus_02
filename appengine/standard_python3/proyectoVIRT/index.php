@@ -1,15 +1,5 @@
 <?php
-    echo "conectando a la DB";
-    $servidor = "localhost";
-    $usuario = "root";
-    $clave = "";
-    $bd = "Nautilus";
-
-    $coneccion = mysqli_connect ($servidor, $usuario, $clave, $bd );
-    if ($coneccion->connect_error) {
-      die("Connection failed: " . $coneccion->connect_error);
-    }
-    echo "Connected successfully";
+    echo 'Bienvenido, ingrese los siguientes datos:'
 ?>
 
 
@@ -31,6 +21,17 @@
       $nombre = $_POST['nombre'];
       $correo = $_POST['correo'];
       $telefono = $_POST['telefono'];
+      echo "conectando a la DB";
+      $servidor = "localhost";
+      $usuario = "root";
+      $clave = "";
+      $bd = "Nautilus";
+
+      $coneccion = mysqli_connect ($servidor, $usuario, $clave, $bd );
+      if ($coneccion->connect_error) {
+        die("Connection failed: " . $coneccion->connect_error);
+      }
+      echo "Connected successfully";
       
       $insertar = "INSERT INTO registro_distribuidores (nombre, correo, telefono) Values ('$nombre','$correo','$telefono')";
       echo $insertar;
