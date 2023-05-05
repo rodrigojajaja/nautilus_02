@@ -64,7 +64,7 @@ class MainPage(webapp2.RequestHandler):
             else:
                 self.response.out.write('An anonymous person wrote:')
             # [START display_image]
-            self.response.out.write('<div><img src="/img?img_id=%s"></img>' %
+            self.response.out.write('<div><img src="static//img?img_id=%s"></img>' %
                                     greeting.key.urlsafe())
             self.response.out.write('<blockquote>%s</blockquote></div>' %
                                     cgi.escape(greeting.content))
