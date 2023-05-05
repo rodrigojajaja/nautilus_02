@@ -1,5 +1,5 @@
 <?php
-    $echo "conectando a la DB";
+    echo "conectando a la DB";
     $servidor = "localhost";
     $usuario = "root";
     $clave = "";
