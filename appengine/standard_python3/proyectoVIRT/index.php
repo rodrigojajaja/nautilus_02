@@ -33,9 +33,15 @@
       $telefono = $_POST['telefono'];
       
       $insertar = "INSERT INTO registro_distribuidores (nombre, correo, telefono) Values ('$nombre','$correo','$telefono')";
+      echo $insertar;
+      if ($connection->query($insertar) === TRUE) {
+        echo "New record created successfully";
+      } else {
+        echo "Error: " . $insertar . "<br>" . $connection->error;
+      }
       
-      $result = mysqli_query($coneccion,$insertar);
-      var_dump($result);
+      $connection->close();
+
       echo "Datos almacenados";
   }
 ?>
