@@ -32,7 +32,7 @@
       $correo = $_POST['correo'];
       $telefono = $_POST['telefono'];
       
-      $insertar = "INSERT INTO registro_distribuidor (nombre, correo, telefono) Values ('$nombre','$correo','$telefono')";
+      $insertar = "INSERT INTO registro_distribuidores (nombre, correo, telefono) Values ('$nombre','$correo','$telefono')";
       
       $result = mysqli_query($coneccion,$insertar);
       var_dump($result);
