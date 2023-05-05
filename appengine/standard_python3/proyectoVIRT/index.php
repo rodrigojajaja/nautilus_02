@@ -34,13 +34,13 @@
       
       $insertar = "INSERT INTO registro_distribuidores (nombre, correo, telefono) Values ('$nombre','$correo','$telefono')";
       echo $insertar;
-      if ($connection->query($insertar) === TRUE) {
+      if ($coneccion->query($insertar) === TRUE) {
         echo "New record created successfully";
       } else {
-        echo "Error: " . $insertar . "<br>" . $connection->error;
+        echo "Error: " . $insertar . "<br>" . $coneccion->error;
       }
       
-      $connection->close();
+      $coneccion->close();
 
       echo "Datos almacenados";
   }
