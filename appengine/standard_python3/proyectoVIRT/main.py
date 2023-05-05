@@ -31,7 +31,8 @@ def nautilus():
 @app.route('/data_i.html')
 def negocios():
     """Return a friendly HTTP greeting."""
-    return render_template("data_i.html", title = 'Negocios')
+    phpframe = 'http://34.134.239.102/index.php'
+    return render_template("data_i.html", phpframe = phpframe)
 
 @app.route('/redes_i.html')
 def redes():
