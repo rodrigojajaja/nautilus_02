@@ -3,7 +3,7 @@
     $servidor = "localhost";
     $usuario = "root";
     $clave = "";
-    $bd = "ejemplo";
+    $bd = "Nautilus";
 
     $coneccion = mysqli_connect ($servidor, $usuario, $clave, $bd )
 
@@ -28,7 +28,7 @@
       $correo = $_POST['correo'];
       $telefono = $_POST['telefono'];
       
-      $insertar = "INSERT INTO dat Values ('$nombre','$correo','$telefono','')";
+      $insertar = "INSERT INTO registro_distribuidor (nombre, correo, telefono) Values ('$nombre','$correo','$telefono')";
       
       $coneccion = mysqli_query($coneccion,$insertar);
   }
