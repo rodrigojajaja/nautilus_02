@@ -1,5 +1,5 @@
 <?php
-    echo 'Bienvenido, ingrese los siguientes datos:'
+    echo 'Bienvenido, ingrese los siguientes datos:\n'
 ?>
 
 
@@ -31,18 +31,18 @@
       if ($coneccion->connect_error) {
         die("Connection failed: " . $coneccion->connect_error);
       }
-      echo "Connected successfully";
+      echo "Connected successfully\n";
       
       $insertar = "INSERT INTO registro_distribuidores (nombre, correo, telefono) Values ('$nombre','$correo','$telefono')";
       
       if ($coneccion->query($insertar) === TRUE) {
-        echo "New record created successfully";
+        echo "New record created successfully\n";
       } else {
         echo "Error: " . $insertar . "<br>" . $coneccion->error;
       }
       
       $coneccion->close();
 
-      echo "Datos almacenados";
+      echo "Datos almacenados\n\n";
   }
 ?>
